@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1570EF</color>
+    <color name="colorPrimaryDark">#1849A9</color>
+    <color name="colorPrimaryLight">#53B1FD</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="darker_gray">#393939</color>
+    <color name="bg_edit_text">#F5FAFF</color>
+    <color name="text_color_hint">#4D000000</color>
+    <color name="et_border_color">#EAECF0</color>
+
+</resources>

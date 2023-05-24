@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">KidsFirst</string>
+    <string name="kids_first">Kids First</string>
+    <string name="masuk">Masuk</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="ingat_saya">Ingat saya</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="daftar">Daftar</string>
+    <string name="daftar_akun">Daftar Akun</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="konfirmasi_kata_sandi">Konfirmasi Kata Sandi</string>
+    <string name="atau_masuk_dengan">atau masuk dengan</string>
+    <string name="atau_daftar_dengan">atau daftar dengan</string>
+    <string name="sudah_mempunyai_akun">Sudah mempunyai akun?</string>
+</resources>

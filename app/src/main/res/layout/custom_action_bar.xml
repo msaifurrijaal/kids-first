@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@android:color/transparent"
+    android:elevation="0dp"
+    android:gravity="center">
+
+    <ImageButton
+        android:id="@+id/btn_close_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/baseline_keyboard_backspace_24"
+        android:layout_marginStart="@dimen/normal_100"
+        app:tint="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/custom_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar Akun"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"/>
+
+</androidx.appcompat.widget.Toolbar>
