@@ -15,4 +15,6 @@
     <string name="atau_masuk_dengan">atau masuk dengan</string>
     <string name="atau_daftar_dengan">atau daftar dengan</string>
     <string name="sudah_mempunyai_akun">Sudah mempunyai akun?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
