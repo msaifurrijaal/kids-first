@@ -17,4 +17,10 @@
     <string name="sudah_mempunyai_akun">Sudah mempunyai akun?</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="artikel">Artikel</string>
+    <string name="cari_artikel">Cari artikel</string>
+    <string name="untuk_anda">Untuk Anda</string>
+    <string name="kehamilan">Kehamilan</string>
+    <string name="following">Following</string>
+
 </resources>

@@ -3,10 +3,7 @@ package com.kelompokpam.kidsfirst.presentation.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
-import android.widget.TextView
-import com.kelompokpam.kidsfirst.MainActivity
-import com.kelompokpam.kidsfirst.R
+import com.kelompokpam.kidsfirst.presentation.main.MainActivity
 import com.kelompokpam.kidsfirst.databinding.ActivityLoginBinding
 import com.kelompokpam.kidsfirst.presentation.register.RegisterActivity
 
