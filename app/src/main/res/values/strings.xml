@@ -22,5 +22,18 @@
     <string name="untuk_anda">Untuk Anda</string>
     <string name="kehamilan">Kehamilan</string>
     <string name="following">Following</string>
+    <string name="silahkan_isi_nama_anda">Silahkan isi nama anda</string>
+    <string name="silahkan_isi_email_anda">Silahkan isi email anda</string>
+    <string name="silahkan_gunakan_email_yang_valid">Silahkan gunakan email yang valid</string>
+    <string name="silahkan_isi_kata_sandi_anda">Silahkan isi kata sandi anda</string>
+    <string name="silahkan_isi_kata_sandi_minimal_8_karakter">Silahkan isi kata sandi minimal 8 karakter</string>
+    <string name="silahkan_isi_konfirmasi_kata_sandi">Silahkan isi konfirmasi kata sandi</string>
+    <string name="silahkan_isi_konfirmasi_kata_sandi_minimal_8_karakter">Silahkan isi konfirmasi kata sandi minimal 8 karakter</string>
+    <string name="kata_sandi_dan_konfirmasi_tidak_sama">Kata sandi dan Konfirmasi tidak sama</string>
+    <string name="error">Error</string>
+    <string name="default_text">-</string>
+    <string name="sedang_proses">Sedang Proses...</string>
+    <string name="sukses">Sukses</string>
+    <string name="selamat_akun_anda_berhasil_dibuat">Selamat akun anda berhasil dibuat</string>
 
 </resources>

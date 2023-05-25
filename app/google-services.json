@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "145271720434",
+    "firebase_url": "https://kids-first-e7f32-default-rtdb.firebaseio.com",
+    "project_id": "kids-first-e7f32",
+    "storage_bucket": "kids-first-e7f32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145271720434:android:effa17a5ea9a260090c36b",
+        "android_client_info": {
+          "package_name": "com.kelompokpam.kidsfirst"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145271720434-edhdqg3v28qhordem2otku5djloee9d6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTYQ5khK9Dwa-AWXsIEiKUpadVvFtJK50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145271720434-edhdqg3v28qhordem2otku5djloee9d6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

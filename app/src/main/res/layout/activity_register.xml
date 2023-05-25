@@ -78,7 +78,7 @@
             android:layout_marginTop="@dimen/small_100"
             app:endIconMode="password_toggle">
             <EditText
-                android:id="@+id/et_password"
+                android:id="@+id/et_kata_sandi"
                 android:background="@drawable/bg_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -103,7 +103,7 @@
             android:layout_marginTop="@dimen/small_100"
             app:endIconMode="password_toggle">
             <EditText
-                android:id="@+id/et_confirm_password"
+                android:id="@+id/et_konfir_kata_sandi"
                 android:background="@drawable/bg_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -135,11 +135,11 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_masuk"
+            android:id="@+id/btn_daftar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_primary"
             android:background="@drawable/bg_btn_auth_color_primary"
-            android:text="@string/masuk"
+            android:text="@string/daftar"
             android:textColor="@color/white"
             android:layout_marginTop="@dimen/normal_125"/>
 
