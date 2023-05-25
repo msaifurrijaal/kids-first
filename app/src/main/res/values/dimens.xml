@@ -47,4 +47,5 @@
     <dimen name="edit_text">56dp</dimen>
     <dimen name="button_primary">56dp</dimen>
     <dimen name="small_75">5dp</dimen>
+    <dimen name="stroke_card">2dp</dimen>
 </resources>

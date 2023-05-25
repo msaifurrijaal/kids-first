@@ -35,5 +35,18 @@
     <string name="sedang_proses">Sedang Proses...</string>
     <string name="sukses">Sukses</string>
     <string name="selamat_akun_anda_berhasil_dibuat">Selamat akun anda berhasil dibuat</string>
+    <string name="online">ONLINE</string>
+    <string name="sp_kandungan_dan_kebidanan">Sp. Kandungan dan Kebidanan</string>
+    <string name="_129">129</string>
+    <string name="rp_49_000">Rp 49.000</string>
+    <string name="rp_50_000">Rp 50.000</string>
+    <string name="diskon2023">DISKON2023</string>
+    <string name="bidang_keahlian">Bidang Keahlian</string>
+    <string name="keluarga_berencana">Keluarga Berencana</string>
+    <string name="penyakit_kelamin">Penyakit Kelamin</string>
+    <string name="kesehatan_kandungan">Kesehatan Kandungan</string>
+    <string name="program_hamil">Program Hamil</string>
+    <string name="chat">Chat</string>
+    <string name="profil_dokter">Profil Dokter</string>
 
 </resources>
