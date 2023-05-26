@@ -51,5 +51,16 @@
     <string name="cari_dokter_kandungan">Cari Dokter Kandungan</string>
     <string name="cari_dokter">Cari Dokter</string>
     <string name="keluarga_berencana_kehaliman_resiko_tinggi">Keluarga Berencana, Kehaliman Resiko Tinggi</string>
+    <string name="anakku">Anakku</string>
+    <string name="trisemester_pertama">Trisemester pertama</string>
+    <string name="lihat_detail">Lihat Detail</string>
+    <string name="_10_minggu_4_hari">10 minggu 4 hari</string>
+    <string name="konsultasi_dengan_dokter">Konsultasi dengan Dokter</string>
+    <string name="forum_diskusi">Forum Diskusi</string>
+    <string name="perkembangan_janin_dan_bumil">Perkembangan Janin dan Bumil</string>
+    <string name="rekomendasi_dokter_kandungan">Rekomendasi Dokter Kandungan</string>
+    <string name="pilihan_dokter_terbaik_untuk_anda">Pilihan dokter terbaik untuk anda</string>
+    <string name="artikel_untuk_anda">Artikel untuk Anda</string>
+    <string name="pilihan_artikel_terbaik_untuk_anda">Pilihan artikel terbaik untuk anda</string>
 
 </resources>
