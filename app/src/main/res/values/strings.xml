@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KidsFirst</string>
+    <string name="app_name">Kids First</string>
     <string name="kids_first">Kids First</string>
     <string name="masuk">Masuk</string>
     <string name="email">Email</string>
@@ -15,4 +15,52 @@
     <string name="atau_masuk_dengan">atau masuk dengan</string>
     <string name="atau_daftar_dengan">atau daftar dengan</string>
     <string name="sudah_mempunyai_akun">Sudah mempunyai akun?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="artikel">Artikel</string>
+    <string name="cari_artikel">Cari artikel</string>
+    <string name="untuk_anda">Untuk Anda</string>
+    <string name="kehamilan">Kehamilan</string>
+    <string name="following">Following</string>
+    <string name="silahkan_isi_nama_anda">Silahkan isi nama anda</string>
+    <string name="silahkan_isi_email_anda">Silahkan isi email anda</string>
+    <string name="silahkan_gunakan_email_yang_valid">Silahkan gunakan email yang valid</string>
+    <string name="silahkan_isi_kata_sandi_anda">Silahkan isi kata sandi anda</string>
+    <string name="silahkan_isi_kata_sandi_minimal_8_karakter">Silahkan isi kata sandi minimal 8 karakter</string>
+    <string name="silahkan_isi_konfirmasi_kata_sandi">Silahkan isi konfirmasi kata sandi</string>
+    <string name="silahkan_isi_konfirmasi_kata_sandi_minimal_8_karakter">Silahkan isi konfirmasi kata sandi minimal 8 karakter</string>
+    <string name="kata_sandi_dan_konfirmasi_tidak_sama">Kata sandi dan Konfirmasi tidak sama</string>
+    <string name="error">Error</string>
+    <string name="default_text">-</string>
+    <string name="sedang_proses">Sedang Proses...</string>
+    <string name="sukses">Sukses</string>
+    <string name="selamat_akun_anda_berhasil_dibuat">Selamat akun anda berhasil dibuat</string>
+    <string name="online">ONLINE</string>
+    <string name="sp_kandungan_dan_kebidanan">Sp. Kandungan dan Kebidanan</string>
+    <string name="_129">129</string>
+    <string name="rp_49_000">Rp 49.000</string>
+    <string name="rp_50_000">Rp 50.000</string>
+    <string name="diskon2023">DISKON2023</string>
+    <string name="bidang_keahlian">Bidang Keahlian</string>
+    <string name="keluarga_berencana">Keluarga Berencana</string>
+    <string name="penyakit_kelamin">Penyakit Kelamin</string>
+    <string name="kesehatan_kandungan">Kesehatan Kandungan</string>
+    <string name="program_hamil">Program Hamil</string>
+    <string name="chat">Chat</string>
+    <string name="profil_dokter">Profil Dokter</string>
+    <string name="cari_dokter_kandungan">Cari Dokter Kandungan</string>
+    <string name="cari_dokter">Cari Dokter</string>
+    <string name="keluarga_berencana_kehaliman_resiko_tinggi">Keluarga Berencana, Kehaliman Resiko Tinggi</string>
+    <string name="anakku">Anakku</string>
+    <string name="trisemester_pertama">Trisemester pertama</string>
+    <string name="lihat_detail">Lihat Detail</string>
+    <string name="_10_minggu_4_hari">10 minggu 4 hari</string>
+    <string name="konsultasi_dengan_dokter">Konsultasi dengan Dokter</string>
+    <string name="forum_diskusi">Forum Diskusi</string>
+    <string name="perkembangan_janin_dan_bumil">Perkembangan Janin dan Bumil</string>
+    <string name="rekomendasi_dokter_kandungan">Rekomendasi Dokter Kandungan</string>
+    <string name="pilihan_dokter_terbaik_untuk_anda">Pilihan dokter terbaik untuk anda</string>
+    <string name="artikel_untuk_anda">Artikel untuk Anda</string>
+    <string name="pilihan_artikel_terbaik_untuk_anda">Pilihan artikel terbaik untuk anda</string>
+
 </resources>

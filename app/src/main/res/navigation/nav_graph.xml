@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/berandaFragment">
+
+    <fragment
+        android:id="@+id/berandaFragment"
+        android:name="com.kelompokpam.kidsfirst.presentation.home.BerandaFragment"
+        android:label="fragment_beranda"
+        tools:layout="@layout/fragment_beranda" />
+    <fragment
+        android:id="@+id/konsultasiFragment"
+        android:name="com.kelompokpam.kidsfirst.presentation.konsultasi.KonsultasiFragment"
+        android:label="fragment_konsultasi"
+        tools:layout="@layout/fragment_konsultasi" />
+    <fragment
+        android:id="@+id/artikelFragment"
+        android:name="com.kelompokpam.kidsfirst.presentation.artikel.ArtikelFragment"
+        android:label="fragment_artikel"
+        tools:layout="@layout/fragment_artikel" />
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.kelompokpam.kidsfirst.presentation.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

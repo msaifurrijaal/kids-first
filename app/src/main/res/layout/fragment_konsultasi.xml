@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.konsultasi.KonsultasiFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_search"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cari_dokter_kandungan"
+            android:textSize="@dimen/h6"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/normal_125"
+            android:layout_marginTop="@dimen/normal_175"/>
+
+        <EditText
+            android:id="@+id/et_search_main"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edit_text_search_height"
+            android:background="@drawable/bg_edit_text"
+            android:drawableStart="@drawable/baseline_search_24"
+            android:drawableTint="@android:color/darker_gray"
+            android:paddingStart="@dimen/normal_100"
+            android:drawablePadding="@dimen/normal_100"
+            android:paddingEnd="@dimen/normal_100"
+            android:hint="@string/cari_dokter"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/tv_tagline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tagline"
+            android:layout_marginEnd="@dimen/normal_125"
+            android:layout_marginTop="@dimen/normal_125" />
+
+        <View
+            android:id="@+id/view_lines"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/darker_gray"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/et_search_main"
+            android:layout_marginTop="@dimen/normal_175"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_dokter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/container_search"
+        tools:listitem="@layout/layout_item_dokter"/>
+
+    <ProgressBar
+        android:id="@+id/pg_konsultasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

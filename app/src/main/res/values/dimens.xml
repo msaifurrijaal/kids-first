@@ -23,8 +23,10 @@
     <dimen name="large_200">64dp</dimen>
     <dimen name="large_225">72dp</dimen>
     <dimen name="large_250">80dp</dimen>
+    <dimen name="large_275">90dp</dimen>
 
-    <dimen name="image_course_home_height">160dp</dimen>
+
+    <dimen name="image_border_height">80dp</dimen>
     <dimen name="image_user_profile_normal">40dp</dimen>
     <dimen name="image_user_profile_large">100dp</dimen>
     <dimen name="image_75">150dp</dimen>
@@ -43,8 +45,15 @@
     <dimen name="button">14sp</dimen>
     <dimen name="caption">12sp</dimen>
     <dimen name="overline">10sp</dimen>
-    <dimen name="edit_text_search_height">48dp</dimen>
+    <dimen name="caption_small">8sp</dimen>
+    <dimen name="small_text">7sp</dimen>
+    <dimen name="edit_text_search_height">56dp</dimen>
     <dimen name="edit_text">56dp</dimen>
     <dimen name="button_primary">56dp</dimen>
     <dimen name="small_75">5dp</dimen>
+    <dimen name="stroke_card">2dp</dimen>
+    <dimen name="height_card">180dp</dimen>
+    <dimen name="image_90">90dp</dimen>
+    <dimen name="image_50">50dp</dimen>
+    <dimen name="rv_artikel_home">600dp</dimen>
 </resources>
