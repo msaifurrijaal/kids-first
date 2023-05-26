@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KidsFirst</string>
+    <string name="app_name">Kids First</string>
     <string name="kids_first">Kids First</string>
     <string name="masuk">Masuk</string>
     <string name="email">Email</string>
@@ -48,5 +48,8 @@
     <string name="program_hamil">Program Hamil</string>
     <string name="chat">Chat</string>
     <string name="profil_dokter">Profil Dokter</string>
+    <string name="cari_dokter_kandungan">Cari Dokter Kandungan</string>
+    <string name="cari_dokter">Cari Dokter</string>
+    <string name="keluarga_berencana_kehaliman_resiko_tinggi">Keluarga Berencana, Kehaliman Resiko Tinggi</string>
 
 </resources>

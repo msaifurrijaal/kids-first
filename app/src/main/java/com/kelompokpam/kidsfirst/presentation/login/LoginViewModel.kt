@@ -9,4 +9,5 @@ class LoginViewModel(application: Application): AndroidViewModel(application) {
     private val repository = UserRepository(application)
 
     fun userAuth(email: String, password: String) = repository.userAuth(email, password)
+    fun isAuth() = repository.isAuth()
 }

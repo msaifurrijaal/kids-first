@@ -3,6 +3,7 @@ package com.kelompokpam.kidsfirst.presentation.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
@@ -30,6 +31,21 @@ class LoginActivity : AppCompatActivity() {
         dialogLoading = showDialogLoading(this)
 
         onAction()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        loginViewModel.isAuth().observe(this){ response ->
+            Log.d("LoginActivity", "${response.toString()}")
+            when(response){
+                is Resource.Error -> {}
+                is Resource.Loading -> {}
+                is Resource.Success -> {
+                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    finishAffinity()
+                }
+            }
+        }
     }
 
     private fun onAction() {

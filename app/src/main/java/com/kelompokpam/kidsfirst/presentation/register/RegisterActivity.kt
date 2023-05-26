@@ -39,6 +39,10 @@ class RegisterActivity : AppCompatActivity() {
                 finish()
             }
 
+            tvContainerRegister.setOnClickListener {
+                finish()
+            }
+
             btnDaftar.setOnClickListener {
                 val name = etNamaLengkap.text.toString().trim()
                 val email = etEmail.text.toString().trim()

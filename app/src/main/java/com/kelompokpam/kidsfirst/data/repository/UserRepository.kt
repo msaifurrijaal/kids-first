@@ -71,4 +71,15 @@ class UserRepository(application: Application) {
         return authResult
     }
 
+    fun isAuth(): LiveData<Resource<FirebaseUser>> {
+        val authResult = MutableLiveData<Resource<FirebaseUser>>()
+
+        val currentUser = firebaseAuth.currentUser
+        authResult.value = Resource.Error("")
+        currentUser?.let {
+            authResult.value = Resource.Success(it)
+        }
+        return authResult
+    }
+
 }

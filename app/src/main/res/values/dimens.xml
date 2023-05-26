@@ -48,4 +48,5 @@
     <dimen name="button_primary">56dp</dimen>
     <dimen name="small_75">5dp</dimen>
     <dimen name="stroke_card">2dp</dimen>
+    <dimen name="height_card">180dp</dimen>
 </resources>
