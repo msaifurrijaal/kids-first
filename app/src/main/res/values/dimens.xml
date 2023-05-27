@@ -52,7 +52,7 @@
     <dimen name="button_primary">56dp</dimen>
     <dimen name="small_75">5dp</dimen>
     <dimen name="stroke_card">2dp</dimen>
-    <dimen name="height_card">180dp</dimen>
+    <dimen name="height_card">170dp</dimen>
     <dimen name="image_90">90dp</dimen>
     <dimen name="image_50">50dp</dimen>
     <dimen name="rv_artikel_home">600dp</dimen>
