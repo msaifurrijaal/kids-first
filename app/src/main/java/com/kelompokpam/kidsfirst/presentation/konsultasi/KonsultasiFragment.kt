@@ -1,5 +1,6 @@
 package com.kelompokpam.kidsfirst.presentation.konsultasi
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,6 +16,7 @@ import com.kelompokpam.kidsfirst.data.Resource
 import com.kelompokpam.kidsfirst.data.model.User
 import com.kelompokpam.kidsfirst.databinding.FragmentBerandaBinding
 import com.kelompokpam.kidsfirst.databinding.FragmentKonsultasiBinding
+import com.kelompokpam.kidsfirst.presentation.detaildokter.DetailDokterActivity
 import com.kelompokpam.kidsfirst.presentation.home.BerandaViewModel
 
 class KonsultasiFragment : Fragment() {
@@ -39,6 +41,20 @@ class KonsultasiFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        observeListDokter()
+        onItemDokterClick()
+
+    }
+
+    private fun onItemDokterClick() {
+        dokterAdapter.onItemClick = { dokter ->
+            startActivity(
+                Intent(activity, DetailDokterActivity::class.java)
+                .putExtra(DetailDokterActivity.USER_ITEM, dokter))
+        }
+    }
+
+    private fun observeListDokter() {
         konsultasiViewModel.getListDokter().observe(viewLifecycleOwner, Observer { response ->
             when(response) {
                 is Resource.Error -> {
@@ -55,8 +71,7 @@ class KonsultasiFragment : Fragment() {
                     binding.rvDokter.visibility = View.VISIBLE
                 }
             }
-        })
-    }
+        })    }
 
     private fun setDokterRv(data: List<User>?) {
         data?.let {

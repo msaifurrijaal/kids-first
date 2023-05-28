@@ -38,13 +38,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -68,7 +61,7 @@
                     android:layout_marginTop="@dimen/normal_75">
 
                     <TextView
-                        android:id="@+id/et_nama_dokter"
+                        android:id="@+id/tv_nama_dokter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:text="@tools:sample/full_names"
@@ -285,7 +278,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/normal_125">
+                    android:layout_marginTop="@dimen/small_100">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
@@ -339,7 +332,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/normal_125">
+                    android:layout_marginTop="@dimen/small_100">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"

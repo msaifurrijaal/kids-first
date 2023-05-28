@@ -9,6 +9,8 @@ import com.kelompokpam.kidsfirst.databinding.LayoutItemDokterBinding
 
 class DokterAdapter: RecyclerView.Adapter<DokterAdapter.ViewHolder>() {
 
+    lateinit var onItemClick: ((User) -> Unit)
+
     class ViewHolder(var binding: LayoutItemDokterBinding): RecyclerView.ViewHolder(binding.root)
 
     private var listDokter = ArrayList<User>()
@@ -32,5 +34,9 @@ class DokterAdapter: RecyclerView.Adapter<DokterAdapter.ViewHolder>() {
             .into(holder.binding.ivDokter)
 
         holder.binding.tvNamaDokter.text = dokter.nameUser
+
+        holder.itemView.setOnClickListener {
+            onItemClick.invoke(dokter)
+        }
     }
 }

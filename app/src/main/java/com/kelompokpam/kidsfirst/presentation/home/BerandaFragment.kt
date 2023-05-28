@@ -1,5 +1,6 @@
 package com.kelompokpam.kidsfirst.presentation.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -16,6 +17,7 @@ import com.kelompokpam.kidsfirst.data.Resource
 import com.kelompokpam.kidsfirst.data.model.User
 import com.kelompokpam.kidsfirst.databinding.FragmentArtikelBinding
 import com.kelompokpam.kidsfirst.databinding.FragmentBerandaBinding
+import com.kelompokpam.kidsfirst.presentation.detaildokter.DetailDokterActivity
 
 class BerandaFragment : Fragment() {
 
@@ -39,6 +41,19 @@ class BerandaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        observeListDokter()
+        onItemDokterClick()
+
+    }
+
+    private fun onItemDokterClick() {
+        dokterAdapter.onItemClick = { dokter ->
+            startActivity(Intent(activity, DetailDokterActivity::class.java)
+                .putExtra(DetailDokterActivity.USER_ITEM, dokter))
+        }
+    }
+
+    private fun observeListDokter() {
         berandaViewModel.getListDokter().observe(viewLifecycleOwner, Observer { response ->
             when(response) {
                 is Resource.Error -> {
