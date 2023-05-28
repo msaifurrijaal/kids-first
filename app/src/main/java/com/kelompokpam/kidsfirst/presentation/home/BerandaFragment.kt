@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kelompokpam.kidsfirst.R
 import com.kelompokpam.kidsfirst.adapter.DokterAdapter
@@ -44,7 +45,14 @@ class BerandaFragment : Fragment() {
         observeUserData()
         observeListDokter()
         onItemDokterClick()
+        onAction()
 
+    }
+
+    private fun onAction() {
+        binding.containerKonsultasi.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_berandaFragment_to_konsultasiFragment)
+        }
     }
 
     private fun observeUserData() {

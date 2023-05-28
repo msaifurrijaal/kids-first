@@ -125,6 +125,7 @@
                 android:layout_marginTop="@dimen/normal_125">
 
                 <LinearLayout
+                    android:id="@+id/container_konsultasi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -168,6 +169,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/container_diskusi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -211,6 +213,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/container_artikel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -254,6 +257,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/container_perkembangan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -337,7 +341,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Selengkapnya"
+                android:text="@string/selengkapnya"
                 android:textSize="@dimen/caption"
                 android:textColor="@color/colorPrimary"/>
 
