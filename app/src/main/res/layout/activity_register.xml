@@ -246,7 +246,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/tv_container_register"
+            android:id="@+id/tv_container_masuk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

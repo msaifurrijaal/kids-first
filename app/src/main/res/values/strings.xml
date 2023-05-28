@@ -62,5 +62,14 @@
     <string name="pilihan_dokter_terbaik_untuk_anda">Pilihan dokter terbaik untuk anda</string>
     <string name="artikel_untuk_anda">Artikel untuk Anda</string>
     <string name="pilihan_artikel_terbaik_untuk_anda">Pilihan artikel terbaik untuk anda</string>
+    <string name="filter_berdasarkan">Filter Berdasarkan</string>
+    <string name="pengalaman">Pengalaman</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="harga">Harga</string>
+    <string name="profil">Profil</string>
+    <string name="email_clarissa">clarissa@mail.com</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
+    <string name="hapus_akun">Hapus Akun</string>
 
 </resources>

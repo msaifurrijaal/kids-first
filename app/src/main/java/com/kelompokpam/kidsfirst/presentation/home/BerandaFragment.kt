@@ -41,9 +41,22 @@ class BerandaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        observeUserData()
         observeListDokter()
         onItemDokterClick()
 
+    }
+
+    private fun observeUserData() {
+        berandaViewModel.getCurrentUser().observe(viewLifecycleOwner, Observer { response ->
+            when(response) {
+                is Resource.Error -> {}
+                is Resource.Loading -> {}
+                is Resource.Success -> {
+                    binding.tvHaiUser.text = "Hai, ${response.data?.nameUser}"
+                }
+            }
+        })
     }
 
     private fun onItemDokterClick() {

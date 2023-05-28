@@ -111,4 +111,32 @@ class UserRepository(application: Application) {
         return dokterLiveData
     }
 
+    fun getCurrentUser(): LiveData<Resource<User>> {
+        val currentUserLiveData = MutableLiveData<Resource<User>>()
+        currentUserLiveData.value = Resource.Loading()
+
+        val currentUser = firebaseAuth.currentUser
+        if (currentUser != null) {
+            val uid = currentUser.uid
+            val userReference = userDatabase.child(uid)
+
+            userReference.addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    val user = dataSnapshot.getValue(User::class.java)
+                    if (user != null) {
+                        currentUserLiveData.value = Resource.Success(user)
+                    } else {
+                        currentUserLiveData.value = Resource.Error("User data not found")
+                    }
+                }
+                override fun onCancelled(databaseError: DatabaseError) {
+                    currentUserLiveData.value = Resource.Error(databaseError.message)
+                }
+            })
+        } else {
+            currentUserLiveData.value = Resource.Error("User not authenticated")
+        }
+        return currentUserLiveData
+    }
+
 }
