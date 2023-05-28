@@ -77,17 +77,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingVertical="@dimen/small_50"
-                    android:paddingHorizontal="@dimen/normal_100"
+                    android:paddingHorizontal="@dimen/normal_75"
                     android:elevation="0dp">
                     <ImageView
-                        android:layout_width="@dimen/normal_100"
-                        android:layout_height="@dimen/normal_100"
+                        android:layout_width="@dimen/normal_75"
+                        android:layout_height="@dimen/normal_75"
                         android:src="@drawable/like"
                         android:layout_gravity="center_vertical"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_129"
+                        android:textSize="@dimen/caption"
                         android:textColor="@color/colorPrimary"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="@dimen/small_50"/>
@@ -142,6 +143,7 @@
                     android:gravity="bottom|end">
 
                     <Button
+                        android:id="@+id/btn_chat"
                         android:layout_width="@dimen/large_225"
                         android:layout_height="@dimen/normal_175"
                         android:background="@drawable/bg_btn_auth_color_primary"

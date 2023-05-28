@@ -41,6 +41,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/image_90"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <LinearLayout
@@ -53,7 +54,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingTop="@dimen/normal_125"
-                android:paddingHorizontal="@dimen/normal_125">
+                android:paddingHorizontal="@dimen/normal_125"
+                android:paddingVertical="@dimen/small_50">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -119,7 +121,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingVertical="@dimen/small_50"
-                        android:paddingHorizontal="@dimen/normal_100">
+                        android:paddingHorizontal="@dimen/normal_100"
+                        android:layout_marginBottom="@dimen/small_25">
                         <ImageView
                             android:layout_width="@dimen/normal_100"
                             android:layout_height="@dimen/normal_100"
@@ -140,7 +143,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimarySoft"
-                android:layout_marginTop="@dimen/normal_125"
+                android:layout_marginTop="@dimen/normal_100"
                 android:padding="@dimen/normal_125">
 
                 <LinearLayout
@@ -359,20 +362,141 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_150">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/normal_200"
+                            android:layout_height="@dimen/normal_200"
+                            android:src="@drawable/edu"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/alumnus"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stanford_university_2020"
+                            android:layout_marginTop="@dimen/small_50"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/universitas_brawijaya_2012" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_150">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/normal_200"
+                            android:layout_height="@dimen/normal_200"
+                            android:src="@drawable/hospital"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/praktik_di"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rumah_sakit_elizabeth_bandung_jawa_barat"
+                            android:layout_marginTop="@dimen/small_50"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rumah_sakit_fatimah_jakarta_dki_jakarta" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_150">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/normal_200"
+                            android:layout_height="@dimen/normal_200"
+                            android:src="@drawable/file"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/nomor_str"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_71113012181333574"
+                            android:layout_marginTop="@dimen/small_50"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="@dimen/normal_125"
-        android:layout_marginHorizontal="@dimen/normal_125"
-        android:text="@string/chat"
-        android:background="@drawable/bg_btn_auth_color_primary"
-        android:textColor="@android:color/white"
-        android:textSize="16sp" />
+        android:background="@color/white"
+        android:padding="@dimen/normal_125"
+        android:elevation="@dimen/small_50">
+
+        <Button
+            android:id="@+id/btn_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chat"
+            android:background="@drawable/bg_btn_auth_color_primary"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

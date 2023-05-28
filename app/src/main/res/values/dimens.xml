@@ -56,4 +56,5 @@
     <dimen name="image_90">90dp</dimen>
     <dimen name="image_50">50dp</dimen>
     <dimen name="rv_artikel_home">600dp</dimen>
+    <dimen name="small_25">2dp</dimen>
 </resources>

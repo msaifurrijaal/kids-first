@@ -1,5 +1,6 @@
 package com.kelompokpam.kidsfirst.adapter
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -38,5 +39,12 @@ class DokterAdapter: RecyclerView.Adapter<DokterAdapter.ViewHolder>() {
         holder.itemView.setOnClickListener {
             onItemClick.invoke(dokter)
         }
+
+        holder.binding.btnChat.setOnClickListener {
+            onItemClick.invoke(dokter)
+        }
+
+        holder.binding.tvHargaAsal.paintFlags = holder.binding.tvHargaAsal.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+
     }
 }

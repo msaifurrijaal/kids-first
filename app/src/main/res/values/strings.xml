@@ -71,5 +71,13 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="logout">Logout</string>
     <string name="hapus_akun">Hapus Akun</string>
+    <string name="alumnus">Alumnus</string>
+    <string name="stanford_university_2020">Stanford University, 2020</string>
+    <string name="universitas_brawijaya_2012">Universitas Brawijaya, 2012</string>
+    <string name="praktik_di">Praktik di</string>
+    <string name="rumah_sakit_elizabeth_bandung_jawa_barat">Rumah Sakit Elizabeth, Bandung, Jawa Barat</string>
+    <string name="rumah_sakit_fatimah_jakarta_dki_jakarta">Rumah Sakit Fatimah, Jakarta, DKI Jakarta</string>
+    <string name="nomor_str">Nomor STR</string>
+    <string name="_71113012181333574">71113012181333574</string>
 
 </resources>
