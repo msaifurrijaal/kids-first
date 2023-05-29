@@ -15,6 +15,11 @@
         android:theme="@style/Theme.KidsFirst"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.edittolbar.EditProfilActivity"
+            android:exported="false"
+            android:label="@string/title_activity_edit_profil"
+            android:theme="@style/Theme.KidsFirst" />
+        <activity
             android:name=".presentation.hapusakun.HapusAkunActivity"
             android:exported="false" />
         <activity
