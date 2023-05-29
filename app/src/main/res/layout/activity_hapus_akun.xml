@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.hapusakun.HapusAkunActivity">
+
+    <include
+        android:id="@+id/toolbar_include"
+        layout="@layout/custom_action_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_include"
+        android:padding="@dimen/normal_125"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hapus_akun_desc"
+            android:textSize="@dimen/body_2"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/normal_75"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kata_sandi"
+            android:textSize="@dimen/body_2"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/normal_125"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text"
+            app:hintEnabled="false"
+            android:layout_marginTop="@dimen/small_100"
+            app:endIconMode="password_toggle">
+            <EditText
+                android:id="@+id/et_kata_sandi"
+                android:background="@drawable/bg_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/kata_sandi"
+                android:textColorHint="@color/text_color_hint"
+                android:paddingHorizontal="@dimen/normal_100"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_daftar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_primary"
+            android:background="@drawable/bg_btn_danger"
+            android:text="@string/hapus_akun"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/normal_125"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
