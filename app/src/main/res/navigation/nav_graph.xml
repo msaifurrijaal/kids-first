@@ -9,7 +9,11 @@
         android:id="@+id/berandaFragment"
         android:name="com.kelompokpam.kidsfirst.presentation.home.BerandaFragment"
         android:label="fragment_beranda"
-        tools:layout="@layout/fragment_beranda" />
+        tools:layout="@layout/fragment_beranda" >
+        <action
+            android:id="@+id/action_berandaFragment_to_konsultasiFragment"
+            app:destination="@id/konsultasiFragment" />
+    </fragment>
     <fragment
         android:id="@+id/konsultasiFragment"
         android:name="com.kelompokpam.kidsfirst.presentation.konsultasi.KonsultasiFragment"

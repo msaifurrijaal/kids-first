@@ -39,7 +39,7 @@ class RegisterActivity : AppCompatActivity() {
                 finish()
             }
 
-            tvContainerRegister.setOnClickListener {
+            tvContainerMasuk.setOnClickListener {
                 finish()
             }
 

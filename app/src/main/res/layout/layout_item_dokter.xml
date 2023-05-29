@@ -23,6 +23,7 @@
                 android:layout_height="match_parent"
                 app:cardCornerRadius="@dimen/normal_75">
                 <ImageView
+                    android:id="@+id/iv_dokter"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     tools:src="@tools:sample/avatars"
@@ -39,10 +40,12 @@
             android:layout_marginStart="@dimen/normal_100">
 
             <TextView
+                android:id="@+id/tv_nama_dokter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="@tools:sample/full_names"
-                android:textSize="@dimen/h6"
+                android:textSize="@dimen/body_1"
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:maxLines="1"
                 android:ellipsize="end" />
@@ -50,6 +53,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/caption"
                 android:text="@string/sp_kandungan_dan_kebidanan"
                 android:layout_marginTop="@dimen/small_50"/>
 
@@ -57,6 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/keluarga_berencana_kehaliman_resiko_tinggi"
+                android:textSize="@dimen/caption"
                 android:maxLines="1"
                 android:ellipsize="end" />
 
@@ -72,16 +77,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingVertical="@dimen/small_50"
-                    android:paddingHorizontal="@dimen/normal_100">
+                    android:paddingHorizontal="@dimen/normal_75"
+                    android:elevation="0dp">
                     <ImageView
-                        android:layout_width="@dimen/normal_100"
-                        android:layout_height="@dimen/normal_100"
+                        android:layout_width="@dimen/normal_75"
+                        android:layout_height="@dimen/normal_75"
                         android:src="@drawable/like"
                         android:layout_gravity="center_vertical"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_129"
+                        android:textSize="@dimen/caption"
                         android:textColor="@color/colorPrimary"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="@dimen/small_50"/>
@@ -108,7 +115,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/rp_49_000"
-                            android:textSize="@dimen/body_1"
+                            android:textSize="@dimen/body_2"
                             android:textColor="@color/black"
                             android:textStyle="bold"
                             android:layout_gravity="center_vertical"
@@ -125,7 +132,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/rp_50_000"
-                        android:textSize="@dimen/body_1"
+                        android:textSize="@dimen/body_2"
                         android:layout_marginEnd="@dimen/small_100" />
                 </LinearLayout>
 
@@ -136,10 +143,12 @@
                     android:gravity="bottom|end">
 
                     <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/normal_225"
+                        android:id="@+id/btn_chat"
+                        android:layout_width="@dimen/large_225"
+                        android:layout_height="@dimen/normal_175"
                         android:background="@drawable/bg_btn_auth_color_primary"
                         android:text="@string/chat"
+                        android:textSize="@dimen/caption"
                         android:textColor="@color/white"/>
 
                 </LinearLayout>

@@ -62,5 +62,23 @@
     <string name="pilihan_dokter_terbaik_untuk_anda">Pilihan dokter terbaik untuk anda</string>
     <string name="artikel_untuk_anda">Artikel untuk Anda</string>
     <string name="pilihan_artikel_terbaik_untuk_anda">Pilihan artikel terbaik untuk anda</string>
+    <string name="filter_berdasarkan">Filter Berdasarkan</string>
+    <string name="pengalaman">Pengalaman</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="harga">Harga</string>
+    <string name="profil">Profil</string>
+    <string name="email_clarissa">clarissa@mail.com</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
+    <string name="hapus_akun">Hapus Akun</string>
+    <string name="alumnus">Alumnus</string>
+    <string name="stanford_university_2020">Stanford University, 2020</string>
+    <string name="universitas_brawijaya_2012">Universitas Brawijaya, 2012</string>
+    <string name="praktik_di">Praktik di</string>
+    <string name="rumah_sakit_elizabeth_bandung_jawa_barat">Rumah Sakit Elizabeth, Bandung, Jawa Barat</string>
+    <string name="rumah_sakit_fatimah_jakarta_dki_jakarta">Rumah Sakit Fatimah, Jakarta, DKI Jakarta</string>
+    <string name="nomor_str">Nomor STR</string>
+    <string name="_71113012181333574">71113012181333574</string>
+    <string name="selengkapnya">Selengkapnya</string>
 
 </resources>
