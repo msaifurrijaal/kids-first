@@ -126,5 +126,8 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="masukkan_nama_anda_yang_baru">Masukkan nama anda yang baru</string>
+    <string name="selamat_profil_anda_berhasil_diubah">Selamat profil anda berhasil diubah</string>
+    <string name="gagal_melakukan_edit_profile_silahkan_kembali_ke_halaman_profil_dan_mencoba_ulang">Gagal melakukan edit profile, silahkan kembali ke halaman profil dan mencoba ulang</string>
 
 </resources>

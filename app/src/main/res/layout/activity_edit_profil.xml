@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.edittolbar.EditProfilActivity"
+    tools:context=".presentation.editprofil.EditProfilActivity"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
@@ -15,7 +15,7 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/btn_close_register"
+            android:id="@+id/btn_close_edit_profil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -34,5 +34,49 @@
             android:layout_gravity="center_horizontal"/>
 
     </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_125"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/masukkan_nama_anda_yang_baru"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text"
+            android:layout_marginTop="@dimen/small_100"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/et_nama_baru"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_edit_text"
+                android:hint="@string/nama_lengkap"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/normal_100"
+                android:textColorHint="@color/text_color_hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_edit_profil"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_primary"
+            android:layout_marginTop="@dimen/normal_125"
+            android:background="@drawable/bg_btn_auth_color_primary"
+            android:text="@string/edit_profile"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
 </LinearLayout>
 

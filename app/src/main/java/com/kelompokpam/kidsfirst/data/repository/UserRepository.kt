@@ -3,6 +3,8 @@ package com.kelompokpam.kidsfirst.data.repository
 import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.google.firebase.auth.EmailAuthCredential
+import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DataSnapshot
@@ -41,7 +43,7 @@ class UserRepository(application: Application) {
             .setValue(
                 User(
                     uidUser = uid,
-                    roleUser = "dokter",
+                    roleUser = "pengguna",
                     nameUser = name,
                     emailUser = email,
                     avatarUser = "https://ui-avatars.com/api/?background=218B5E&color=fff&size=100&rounded=true&name=$name"
@@ -137,6 +139,62 @@ class UserRepository(application: Application) {
             currentUserLiveData.value = Resource.Error("User not authenticated")
         }
         return currentUserLiveData
+    }
+
+    fun editProfil(userId: String, newName: String): LiveData<Resource<Unit>> {
+        val editResult = MutableLiveData<Resource<Unit>>()
+        editResult.value = Resource.Loading()
+
+        val userRef = userDatabase.child(userId)
+        userRef.child("name_user").setValue(newName)
+            .addOnSuccessListener {
+                editResult.value = Resource.Success(Unit)
+            }
+            .addOnFailureListener { error ->
+                editResult.value = Resource.Error(error.message)
+            }
+
+        return editResult
+    }
+
+    fun deleteAuth(emailUser: String, password: String) : LiveData<Resource<Unit>> {
+        val hasilAuth = MutableLiveData<Resource<Unit>>()
+        hasilAuth.value = Resource.Loading()
+
+        val credentials = EmailAuthProvider.getCredential(emailUser, password)
+        firebaseAuth.signInWithCredential(credentials)
+            .addOnSuccessListener {
+                val user = firebaseAuth.currentUser
+                if (user != null) {
+                    user.delete()
+                        .addOnSuccessListener {
+                            hasilAuth.value = Resource.Success(Unit)
+                        }
+                        .addOnFailureListener { exception ->
+                            hasilAuth.value = Resource.Error(exception.message)
+                        }
+                }
+            }
+            .addOnFailureListener { exception ->
+                hasilAuth.value = Resource.Error(exception.message)
+            }
+
+        return hasilAuth
+    }
+
+    fun deleteUser(userId: String) : LiveData<Resource<Unit>> {
+        val responseDelete = MutableLiveData<Resource<Unit>>()
+        responseDelete.value = Resource.Loading()
+
+        userDatabase.child(userId).removeValue()
+            .addOnSuccessListener {
+                responseDelete.value = Resource.Success(Unit)
+            }
+            .addOnFailureListener { exception ->
+                responseDelete.value = Resource.Error(exception.message)
+            }
+
+        return  responseDelete
     }
 
 }
