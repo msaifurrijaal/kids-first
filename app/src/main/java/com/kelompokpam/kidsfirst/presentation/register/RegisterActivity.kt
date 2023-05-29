@@ -35,9 +35,6 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun onAction() {
         binding.apply {
-            toolbarInclude.btnCloseRegister.setOnClickListener {
-                finish()
-            }
 
             tvContainerMasuk.setOnClickListener {
                 finish()
@@ -54,6 +51,12 @@ class RegisterActivity : AppCompatActivity() {
                     createUserAuth(name, email, pass)
                 }
             }
+
+            btnCloseRegister.setOnClickListener {
+                finish()
+            }
+
+
         }
     }
 

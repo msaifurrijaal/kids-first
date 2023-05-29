@@ -4,36 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.hapusakun.HapusAkunActivity">
+    tools:context=".presentation.hapuspengguna.HapusPenggunaActivity">
 
-    <RelativeLayout
-        android:id="@+id/custom_toolbar"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@android:color/transparent"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:background="@color/white"
+        android:elevation="@dimen/small_50"
+        android:gravity="center"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/btn_close_register"
+            android:id="@+id/btn_close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/normal_100"
             android:background="@android:color/transparent"
-            android:layout_centerVertical="true"
             android:src="@drawable/baseline_keyboard_backspace_24"
-            app:tint="@android:color/darker_gray" />
+            android:layout_marginStart="@dimen/normal_100"
+            app:tint="@android:color/darker_gray"
+            android:contentDescription="null"/>
 
         <TextView
             android:id="@+id/custom_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Hapus Akun"
+            android:text="@string/hapus_akun"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
 
-    </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -41,7 +43,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="@dimen/normal_125"
-        app:layout_constraintTop_toBottomOf="@+id/custom_toolbar">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <TextView
             android:layout_width="wrap_content"
@@ -78,7 +80,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btn_daftar"
+            android:id="@+id/btn_hapus"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_primary"
             android:layout_marginTop="@dimen/normal_125"
@@ -88,5 +90,6 @@
 
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
