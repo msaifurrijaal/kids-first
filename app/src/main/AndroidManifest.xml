@@ -15,9 +15,13 @@
         android:theme="@style/Theme.KidsFirst"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.edittolbar.EditProfilActivity"
+            android:exported="false"
+            android:label="@string/title_activity_edit_profil"
+            android:theme="@style/Theme.KidsFirst" />
+        <activity
             android:name=".presentation.detaildokter.DetailDokterActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".presentation.register.RegisterActivity"
             android:exported="false" />
@@ -35,7 +39,7 @@
         </activity>
         <activity
             android:name=".presentation.main.MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>

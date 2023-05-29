@@ -12,5 +12,6 @@
     </style>
 
     <style name="Theme.KidsFirst" parent="Base.Theme.KidsFirst" />
+
     <style name="Theme2.KidsFirst" parent="Theme.AppCompat.Light" />
 </resources>
