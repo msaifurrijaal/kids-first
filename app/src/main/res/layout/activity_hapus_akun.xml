@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.hapusakun.HapusAkunActivity">
+
+    <RelativeLayout
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_close_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_100"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_keyboard_backspace_24"
+            app:tint="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/custom_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Hapus Akun"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_125"
+        app:layout_constraintTop_toBottomOf="@+id/custom_toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_75"
+            android:text="@string/hapus_akun_desc"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_125"
+            android:text="@string/kata_sandi"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text"
+            android:layout_marginTop="@dimen/small_100"
+            app:endIconMode="password_toggle"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/et_kata_sandi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_edit_text"
+                android:hint="@string/kata_sandi"
+                android:inputType="textPassword"
+                android:paddingHorizontal="@dimen/normal_100"
+                android:textColorHint="@color/text_color_hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_daftar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_primary"
+            android:layout_marginTop="@dimen/normal_125"
+            android:background="@drawable/bg_btn_danger"
+            android:text="@string/hapus_akun"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

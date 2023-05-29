@@ -71,6 +71,7 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="logout">Logout</string>
     <string name="hapus_akun">Hapus Akun</string>
+    <string name="hapus_akun_desc">Anda akan memulai proses penghapusan akun. Akun Anda tidak lagi dapat dilihat di Aplikasi Kids First. Masukkan kembali kata sandi Kids First Anda untuk menghapus akun Anda.</string>
     <string name="alumnus">Alumnus</string>
     <string name="stanford_university_2020">Stanford University, 2020</string>
     <string name="universitas_brawijaya_2012">Universitas Brawijaya, 2012</string>
