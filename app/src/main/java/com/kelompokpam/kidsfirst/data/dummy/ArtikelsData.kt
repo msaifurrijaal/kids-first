@@ -12,10 +12,10 @@ object ArtikelsData {
     )
 
     private val imgProfileUser = arrayOf(
-        "https://randomuser.me/api/portraits/men/1.jpg",
-        "https://randomuser.me/api/portraits/men/26.jpg",
-        "https://randomuser.me/api/portraits/men/20.jpg",
-        "https://randomuser.me/api/portraits/men/10.jpg"
+        "https://randomuser.me/api/portraits/men/5.jpg",
+        "https://randomuser.me/api/portraits/women/26.jpg",
+        "https://randomuser.me/api/portraits/women/20.jpg",
+        "https://randomuser.me/api/portraits/men/16.jpg"
     )
 
     private val artikelImages = intArrayOf(
