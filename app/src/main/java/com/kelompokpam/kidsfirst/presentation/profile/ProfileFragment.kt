@@ -17,6 +17,7 @@ import com.kelompokpam.kidsfirst.R
 import com.kelompokpam.kidsfirst.data.Resource
 import com.kelompokpam.kidsfirst.data.model.User
 import com.kelompokpam.kidsfirst.databinding.FragmentProfileBinding
+import com.kelompokpam.kidsfirst.presentation.chat.ListChatActivity
 import com.kelompokpam.kidsfirst.presentation.editprofil.EditProfilActivity
 import com.kelompokpam.kidsfirst.presentation.hapuspengguna.HapusPenggunaActivity
 import com.kelompokpam.kidsfirst.presentation.login.LoginActivity
@@ -95,6 +96,12 @@ class ProfileFragment : Fragment() {
                         .putExtra(EditProfilActivity.USER_ITEM, user)
                     )
                 }
+            }
+
+            btnChat.setOnClickListener {
+                startActivity(Intent(requireContext(), ListChatActivity::class.java)
+                    .putExtra(ListChatActivity.USER_ITEM, user)
+                )
             }
 
             btnHapusAkun.setOnClickListener {
