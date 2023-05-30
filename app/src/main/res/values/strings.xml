@@ -129,5 +129,20 @@
     <string name="masukkan_nama_anda_yang_baru">Masukkan nama anda yang baru</string>
     <string name="selamat_profil_anda_berhasil_diubah">Selamat profil anda berhasil diubah</string>
     <string name="gagal_melakukan_edit_profile_silahkan_kembali_ke_halaman_profil_dan_mencoba_ulang">Gagal melakukan edit profile, silahkan kembali ke halaman profil dan mencoba ulang</string>
+    <string name="ringkasan_pembayaran">Ringkasan Pembayaran</string>
+    <string name="biaya_sesi_60_menit">Biaya Sesi 60 menit</string>
+    <string name="voucher_diskon">Voucher Diskon</string>
+    <string name="rp_1_000">-Rp 1.000</string>
+    <string name="total_pembayaran">Total Pembayaran</string>
+    <string name="beli_paket_konsultasi">Beli Paket Konsultasi</string>
+    <string name="hemat_hingga_26">Hemat hingga 26%</string>
+    <string name="kamu_hemat_rp1_000">Kamu hemat Rp1.000</string>
+    <string name="pilih_metode_pembayaran">Pilih Metode Pembayaran</string>
+    <string name="bayar">Bayar</string>
+    <string name="pembayaranmu">Pembayaranmu</string>
+    <string name="pesan">Pesan</string>
+    <string name="lupa_passoword">Lupa Password</string>
+    <string name="dr_david">Dr. David</string>
+    <string name="message">Message</string>
 
 </resources>

@@ -13,8 +13,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kelompokpam.kidsfirst.R
+import com.kelompokpam.kidsfirst.adapter.ArtikelAdapter
 import com.kelompokpam.kidsfirst.adapter.DokterAdapter
 import com.kelompokpam.kidsfirst.data.Resource
+import com.kelompokpam.kidsfirst.data.dummy.ArtikelsData
+import com.kelompokpam.kidsfirst.data.model.Artikel
 import com.kelompokpam.kidsfirst.data.model.User
 import com.kelompokpam.kidsfirst.databinding.FragmentArtikelBinding
 import com.kelompokpam.kidsfirst.databinding.FragmentBerandaBinding
@@ -26,6 +29,8 @@ class BerandaFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var berandaViewModel: BerandaViewModel
     private lateinit var dokterAdapter : DokterAdapter
+    private lateinit var artikelAdapter: ArtikelAdapter
+    private var list: ArrayList<Artikel> = arrayListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +40,9 @@ class BerandaFragment : Fragment() {
         _binding = FragmentBerandaBinding.inflate(inflater, container, false)
 
         dokterAdapter = DokterAdapter()
+        artikelAdapter = ArtikelAdapter()
+
+        list.addAll(ArtikelsData.listData)
 
         return binding.root
     }
@@ -45,8 +53,18 @@ class BerandaFragment : Fragment() {
         observeUserData()
         observeListDokter()
         onItemDokterClick()
+        setArtikelRV()
         onAction()
 
+    }
+
+    private fun setArtikelRV() {
+        artikelAdapter.setArtikelList(list.take(3))
+
+        binding.rvArtikel.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = artikelAdapter
+        }
     }
 
     private fun onAction() {

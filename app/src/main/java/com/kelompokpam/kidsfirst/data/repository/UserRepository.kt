@@ -19,6 +19,7 @@ class UserRepository(application: Application) {
 
     private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
     private val userDatabase: DatabaseReference = FirebaseDatabase.getInstance().reference.child("users")
+    private val currentUser = firebaseAuth.currentUser
 
     fun createAuth(email: String, password: String): LiveData<Resource<FirebaseUser>> {
         val authResult = MutableLiveData<Resource<FirebaseUser>>()
@@ -195,6 +196,49 @@ class UserRepository(application: Application) {
             }
 
         return  responseDelete
+    }
+
+    fun resetPassword(emailUser: String): LiveData<Resource<String>> {
+        val resetPasswordLiveData = MutableLiveData<Resource<String>>()
+        resetPasswordLiveData.value = Resource.Loading()
+
+        firebaseAuth.sendPasswordResetEmail(emailUser)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    resetPasswordLiveData.value = Resource.Success("Email reset password berhasil dikirim")
+                } else {
+                    resetPasswordLiveData.value = Resource.Error("Gagal mengirim email reset password")
+                }
+            }
+        return resetPasswordLiveData
+    }
+
+    fun getAllUsers(): LiveData<Resource<List<User>>> {
+        val usersLiveData = MutableLiveData<Resource<List<User>>>()
+        usersLiveData.value = Resource.Loading()
+
+        userDatabase.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val userList = mutableListOf<User>()
+
+                for (userSnapshot in dataSnapshot.children) {
+                    val user = userSnapshot.getValue(User::class.java)
+                    user?.let {
+                        if (!user.uidUser.equals(currentUser!!.uid)) {
+                            userList.add(it)
+                        }
+                    }
+                }
+
+                usersLiveData.value = Resource.Success(userList)
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                usersLiveData.value = Resource.Error(databaseError.message)
+            }
+        })
+
+        return usersLiveData
     }
 
 }

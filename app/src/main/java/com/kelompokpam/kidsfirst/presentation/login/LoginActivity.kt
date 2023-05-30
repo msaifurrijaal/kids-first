@@ -11,6 +11,7 @@ import com.kelompokpam.kidsfirst.R
 import com.kelompokpam.kidsfirst.data.Resource
 import com.kelompokpam.kidsfirst.presentation.main.MainActivity
 import com.kelompokpam.kidsfirst.databinding.ActivityLoginBinding
+import com.kelompokpam.kidsfirst.presentation.lupapassword.LupaPasswordActivity
 import com.kelompokpam.kidsfirst.presentation.register.RegisterActivity
 import com.kelompokpam.kidsfirst.utils.hideSoftKeyboard
 import com.kelompokpam.kidsfirst.utils.showDialogError
@@ -62,6 +63,10 @@ class LoginActivity : AppCompatActivity() {
                     hideSoftKeyboard(this@LoginActivity, binding.root)
                     loginToServer(email, pass)
                 }
+            }
+
+            tvLupaPassword.setOnClickListener {
+                startActivity(Intent(this@LoginActivity, LupaPasswordActivity::class.java))
             }
         }
     }
