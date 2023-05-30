@@ -5,10 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingHorizontal="@dimen/normal_125"
-    android:paddingVertical="@dimen/small_100">
+    android:paddingVertical="@dimen/normal_75">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/userImage"
+        android:id="@+id/iv_user"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="@dimen/normal_100"
@@ -24,7 +24,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/userName"
+            android:id="@+id/tv_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="1"
@@ -32,15 +32,6 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             tools:text="@tools:sample/full_names" />
-
-        <TextView
-            android:id="@+id/temp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:textSize="@dimen/body_2"
-            tools:text="@tools:sample/lorem"
-            android:layout_marginTop="@dimen/small_25"/>
 
     </LinearLayout>
 

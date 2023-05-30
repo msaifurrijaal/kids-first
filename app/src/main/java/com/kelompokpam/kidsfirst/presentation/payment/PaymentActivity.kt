@@ -1,11 +1,13 @@
 package com.kelompokpam.kidsfirst.presentation.payment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.kelompokpam.kidsfirst.R
 import com.kelompokpam.kidsfirst.data.model.User
 import com.kelompokpam.kidsfirst.databinding.ActivityPaymentBinding
+import com.kelompokpam.kidsfirst.presentation.chat.ChatActivity
 import com.kelompokpam.kidsfirst.presentation.detaildokter.DetailDokterActivity
 
 class PaymentActivity : AppCompatActivity() {
@@ -29,6 +31,13 @@ class PaymentActivity : AppCompatActivity() {
             btnClosePayment.setOnClickListener {
                 finish()
             }
+
+            btnBayar.setOnClickListener {
+                startActivity(
+                    Intent(this@PaymentActivity, ChatActivity::class.java)
+                    .putExtra(ChatActivity.USER_ITEM, dokter)
+                )
+            }
         }
     }
 
@@ -43,7 +52,7 @@ class PaymentActivity : AppCompatActivity() {
     }
 
     private fun getInformationFromIntent() {
-        dokter = intent.getParcelableExtra<User>(DetailDokterActivity.USER_ITEM)
+        dokter = intent.getParcelableExtra<User>(PaymentActivity.USER_ITEM)
     }
 
     companion object {
