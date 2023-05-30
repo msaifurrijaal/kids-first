@@ -19,6 +19,7 @@ class UserRepository(application: Application) {
 
     private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
     private val userDatabase: DatabaseReference = FirebaseDatabase.getInstance().reference.child("users")
+    private val currentUser = firebaseAuth.currentUser
 
     fun createAuth(email: String, password: String): LiveData<Resource<FirebaseUser>> {
         val authResult = MutableLiveData<Resource<FirebaseUser>>()
@@ -210,6 +211,34 @@ class UserRepository(application: Application) {
                 }
             }
         return resetPasswordLiveData
+    }
+
+    fun getAllUsers(): LiveData<Resource<List<User>>> {
+        val usersLiveData = MutableLiveData<Resource<List<User>>>()
+        usersLiveData.value = Resource.Loading()
+
+        userDatabase.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val userList = mutableListOf<User>()
+
+                for (userSnapshot in dataSnapshot.children) {
+                    val user = userSnapshot.getValue(User::class.java)
+                    user?.let {
+                        if (!user.uidUser.equals(currentUser!!.uid)) {
+                            userList.add(it)
+                        }
+                    }
+                }
+
+                usersLiveData.value = Resource.Success(userList)
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                usersLiveData.value = Resource.Error(databaseError.message)
+            }
+        })
+
+        return usersLiveData
     }
 
 }
