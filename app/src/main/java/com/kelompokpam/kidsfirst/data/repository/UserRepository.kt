@@ -197,4 +197,19 @@ class UserRepository(application: Application) {
         return  responseDelete
     }
 
+    fun resetPassword(emailUser: String): LiveData<Resource<String>> {
+        val resetPasswordLiveData = MutableLiveData<Resource<String>>()
+        resetPasswordLiveData.value = Resource.Loading()
+
+        firebaseAuth.sendPasswordResetEmail(emailUser)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    resetPasswordLiveData.value = Resource.Success("Email reset password berhasil dikirim")
+                } else {
+                    resetPasswordLiveData.value = Resource.Error("Gagal mengirim email reset password")
+                }
+            }
+        return resetPasswordLiveData
+    }
+
 }

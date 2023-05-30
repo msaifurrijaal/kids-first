@@ -141,5 +141,6 @@
     <string name="bayar">Bayar</string>
     <string name="pembayaranmu">Pembayaranmu</string>
     <string name="pesan">Pesan</string>
+    <string name="lupa_passoword">Lupa Password</string>
 
 </resources>
