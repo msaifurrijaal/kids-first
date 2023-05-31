@@ -55,7 +55,7 @@ class ChatRepository(application: Application) {
 
         val chatRef = FirebaseDatabase.getInstance().getReference("chats")
 
-        chatRef.addListenerForSingleValueEvent(object : ValueEventListener {
+        chatRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val chatList = mutableListOf<Chat>()
 
