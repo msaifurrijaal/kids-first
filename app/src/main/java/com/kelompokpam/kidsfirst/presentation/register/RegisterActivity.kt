@@ -1,5 +1,6 @@
 package com.kelompokpam.kidsfirst.presentation.register
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -10,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.kelompokpam.kidsfirst.R
 import com.kelompokpam.kidsfirst.data.Resource
 import com.kelompokpam.kidsfirst.databinding.ActivityRegisterBinding
+import com.kelompokpam.kidsfirst.presentation.lupapassword.LupaPasswordActivity
 import com.kelompokpam.kidsfirst.utils.hideSoftKeyboard
 import com.kelompokpam.kidsfirst.utils.showDialogError
 import com.kelompokpam.kidsfirst.utils.showDialogLoading
@@ -50,6 +52,10 @@ class RegisterActivity : AppCompatActivity() {
                     hideSoftKeyboard(this@RegisterActivity, binding.root)
                     createUserAuth(name, email, pass)
                 }
+            }
+
+            tvLupaPassword.setOnClickListener {
+                startActivity(Intent(this@RegisterActivity, LupaPasswordActivity::class.java))
             }
 
             btnCloseRegister.setOnClickListener {
