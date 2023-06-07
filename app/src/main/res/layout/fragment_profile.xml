@@ -25,14 +25,36 @@
             android:layout_gravity="center_horizontal"/>
 
     </androidx.appcompat.widget.Toolbar>
-    
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_user"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="@dimen/image_90"
         android:layout_height="@dimen/image_90"
-        tools:src="@tools:sample/avatars"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/normal_175"/>
+        android:layout_marginTop="@dimen/normal_175"
+        android:layout_gravity="center_horizontal">
+
+        <ProgressBar
+            android:id="@+id/pg_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user"
+            android:layout_width="@dimen/image_90"
+            android:layout_height="@dimen/image_90"
+            tools:src="@tools:sample/avatars"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+
 
     <TextView
         android:id="@+id/tv_name_user"

@@ -11,7 +11,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.provider.MediaStore
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
@@ -68,33 +67,87 @@ class EditProfilActivity : AppCompatActivity() {
 
             btnEditProfil.setOnClickListener {
                 val newName = etNamaBaru.text.toString()
-                if (user != null) {
-                    editProfilViewModel.editProfil(user?.uidUser!!, newName).observe(this@EditProfilActivity) { response ->
-                        when(response){
-                            is Resource.Error -> {
-                                dialogLoading.dismiss()
-                                showDialogError(this@EditProfilActivity, response.message.toString())
-                            }
-                            is Resource.Loading -> {
-                                dialogLoading.show()
-                            }
-                            is Resource.Success -> {
-                                val dialogSuccess = showDialogSuccess(
-                                    this@EditProfilActivity,
-                                    getString(R.string.selamat_profil_anda_berhasil_diubah)
-                                )
-                                dialogSuccess.show()
-
-                                Handler(Looper.getMainLooper())
-                                    .postDelayed({
-                                        dialogSuccess.dismiss()
-                                        finish()
-                                    }, 1500)
-                            }
-                        }
-                    }
+                if (user != null && imageUser != null && !newName.isEmpty()) {
+                    uploadImageToServe(newName)
+                } else if (user != null && imageUser == null && !newName.isEmpty()) {
+                    editUsername(newName)
                 } else {
                     showDialogError(this@EditProfilActivity, getString(R.string.gagal_melakukan_edit_profile_silahkan_kembali_ke_halaman_profil_dan_mencoba_ulang))
+                }
+            }
+        }
+    }
+
+    private fun uploadImageToServe(newName: String) {
+        editProfilViewModel.uploadImage(imageUser!!).observe(this) { response ->
+            when (response) {
+                is Resource.Error -> {
+                    dialogLoading.dismiss()
+                    showDialogError(this@EditProfilActivity, response.message.toString())
+                }
+                is Resource.Loading -> {
+                    dialogLoading.show()
+                }
+                is Resource.Success -> {
+                    dialogLoading.dismiss()
+                    val imageUrl = response.data
+                    editPhotoAndName(newName, imageUrl)
+                }
+            }
+        }
+    }
+
+    private fun editPhotoAndName(newName: String, imageUrl: String?) {
+        editProfilViewModel.editPhotoAndUsername(newName, imageUrl!!).observe(this) { response ->
+            when(response) {
+                is Resource.Error -> {
+                    dialogLoading.dismiss()
+                    showDialogError(this@EditProfilActivity, response.message.toString())
+                }
+                is Resource.Loading -> {
+                    dialogLoading.show()
+                }
+                is Resource.Success -> {
+                    dialogLoading.dismiss()
+                    val dialogSuccess = showDialogSuccess(
+                        this@EditProfilActivity,
+                        getString(R.string.selamat_profil_anda_berhasil_diubah)
+                    )
+                    dialogSuccess.show()
+
+                    Handler(Looper.getMainLooper())
+                        .postDelayed({
+                            dialogSuccess.dismiss()
+                            finish()
+                        }, 1500)
+                }
+            }
+        }
+    }
+
+    private fun editUsername(newName: String) {
+        editProfilViewModel.editProfil(user?.uidUser!!, newName).observe(this@EditProfilActivity) { response ->
+            when(response){
+                is Resource.Error -> {
+                    dialogLoading.dismiss()
+                    showDialogError(this@EditProfilActivity, response.message.toString())
+                }
+                is Resource.Loading -> {
+                    dialogLoading.show()
+                }
+                is Resource.Success -> {
+                    dialogLoading.dismiss()
+                    val dialogSuccess = showDialogSuccess(
+                        this@EditProfilActivity,
+                        getString(R.string.selamat_nama_anda_berhasil_di_update)
+                    )
+                    dialogSuccess.show()
+
+                    Handler(Looper.getMainLooper())
+                        .postDelayed({
+                            dialogSuccess.dismiss()
+                            finish()
+                        }, 1500)
                 }
             }
         }
@@ -172,7 +225,6 @@ class EditProfilActivity : AppCompatActivity() {
 
     private fun getInformationFromIntent() {
         user = intent.getParcelableExtra<User>(EditProfilActivity.USER_ITEM)
-        Log.d("EditProfilActivity", user.toString())
     }
 
     companion object {
