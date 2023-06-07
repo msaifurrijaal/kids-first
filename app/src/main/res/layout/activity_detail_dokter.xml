@@ -83,7 +83,8 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="@dimen/small_50">
+                            android:paddingVertical="@dimen/small_50"
+                            android:paddingHorizontal="@dimen/normal_75">
                             <ImageView
                                 android:layout_width="@dimen/normal_75"
                                 android:layout_height="@dimen/normal_75"

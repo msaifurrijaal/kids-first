@@ -67,7 +67,9 @@ class ProfileFragment : Fragment() {
         profilViewModel.getCurrentUser().observe(viewLifecycleOwner, Observer { response ->
             when(response){
                 is Resource.Error -> { }
-                is Resource.Loading -> { }
+                is Resource.Loading -> {
+                    loadingResponse()
+                }
                 is Resource.Success -> {
                     Glide.with(this)
                         .load(response.data?.avatarUser)
@@ -76,10 +78,30 @@ class ProfileFragment : Fragment() {
                     binding.tvNameUser.text = response.data?.nameUser
                     binding.tvEmailUser.text = response.data?.emailUser
 
+                    successResponse()
+
                     user = response.data
                 }
             }
         })
+    }
+
+    private fun successResponse() {
+        binding.apply {
+            pgProfile.visibility = View.INVISIBLE
+            ivUser.visibility = View.VISIBLE
+            tvNameUser.visibility = View.VISIBLE
+            tvEmailUser.visibility = View.VISIBLE
+        }
+    }
+
+    private fun loadingResponse() {
+        binding.apply {
+            pgProfile.visibility = View.VISIBLE
+            ivUser.visibility = View.INVISIBLE
+            tvNameUser.visibility = View.INVISIBLE
+            tvEmailUser.visibility = View.INVISIBLE
+        }
     }
 
     private fun onAction() {

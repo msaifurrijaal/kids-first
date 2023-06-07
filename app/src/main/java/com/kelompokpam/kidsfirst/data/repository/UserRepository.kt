@@ -1,9 +1,9 @@
 package com.kelompokpam.kidsfirst.data.repository
 
 import android.app.Application
+import android.graphics.Bitmap
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.google.firebase.auth.EmailAuthCredential
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -12,8 +12,12 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 import com.kelompokpam.kidsfirst.data.Resource
 import com.kelompokpam.kidsfirst.data.model.User
+import java.io.ByteArrayOutputStream
 
 class UserRepository(application: Application) {
 
@@ -142,7 +146,7 @@ class UserRepository(application: Application) {
         return currentUserLiveData
     }
 
-    fun editProfil(userId: String, newName: String): LiveData<Resource<Unit>> {
+    fun updateName(userId: String, newName: String): LiveData<Resource<Unit>> {
         val editResult = MutableLiveData<Resource<Unit>>()
         editResult.value = Resource.Loading()
 
@@ -240,5 +244,52 @@ class UserRepository(application: Application) {
 
         return usersLiveData
     }
+
+    fun updatePhotoAndName(newName: String, newAvatar: String): LiveData<Resource<Unit>> {
+        val updateResult = MutableLiveData<Resource<Unit>>()
+        updateResult.value = Resource.Loading()
+
+        val userRef = Firebase.database.reference.child("users").child(currentUser!!.uid)
+        val updates = HashMap<String, Any>()
+        updates["name_user"] = newName
+        updates["avatar_user"] = newAvatar
+
+        userRef.updateChildren(updates)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    updateResult.value = Resource.Success(Unit)
+                } else {
+                    val errorMessage = task.exception?.message ?: "Failed to update profile"
+                    updateResult.value = Resource.Error(errorMessage)
+                }
+            }
+
+        return updateResult
+    }
+
+    fun uploadImage(bitmap: Bitmap): LiveData<Resource<String>> {
+        val uploadResult = MutableLiveData<Resource<String>>()
+        uploadResult.value = Resource.Loading()
+
+        val storageRef = Firebase.storage.reference
+        val imageRef = storageRef.child("images/${currentUser?.uid}.jpg")
+        val baos = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+        val imageData = baos.toByteArray()
+
+        val uploadTask = imageRef.putBytes(imageData)
+        uploadTask.addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                imageRef.downloadUrl.addOnSuccessListener { uri ->
+                    uploadResult.value = Resource.Success(uri.toString())
+                }
+            } else {
+                uploadResult.value = Resource.Error("Failed to upload image")
+            }
+        }
+
+        return uploadResult
+    }
+
 
 }
