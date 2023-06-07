@@ -1,6 +1,7 @@
 package com.kelompokpam.kidsfirst.utils
 
 import android.content.Context
+import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -9,7 +10,16 @@ import androidx.appcompat.app.AppCompatActivity
 import com.kelompokpam.kidsfirst.databinding.LayoutDialogErrorBinding
 import com.kelompokpam.kidsfirst.databinding.LayoutDialogLoadingBinding
 import com.kelompokpam.kidsfirst.databinding.LayoutDialogSuccessBinding
+import java.io.File
+import java.text.SimpleDateFormat
+import java.util.Locale
 
+private const val FILENAME_FORMAT = "dd-MMM-yyyy"
+
+val timeStamp: String = SimpleDateFormat(
+    FILENAME_FORMAT,
+    Locale.US
+).format(System.currentTimeMillis())
 
 fun View.visible(){ visibility = View.VISIBLE }
 fun View.gone(){ visibility = View.GONE }
@@ -52,4 +62,9 @@ fun showDialogError(context: Context, message: String){
 fun hideSoftKeyboard(context: Context, view: View) {
     val imm = context.getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE) as InputMethodManager
     imm.hideSoftInputFromWindow(view.windowToken, 0)
+}
+
+fun createCustomTempFile(context: Context): File {
+    val storageDir: File? = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+    return File.createTempFile(timeStamp, ".jpg", storageDir)
 }

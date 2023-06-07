@@ -144,5 +144,7 @@
     <string name="lupa_passoword">Lupa Password</string>
     <string name="dr_david">Dr. David</string>
     <string name="message">Message</string>
+    <string name="ketuk_untuk_mengganti_foto">Ketuk untuk mengganti foto</string>
+    <string name="selamat_nama_anda_berhasil_di_update">Selamat, nama anda berhasil di update</string>
 
 </resources>
