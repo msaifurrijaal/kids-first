@@ -28,9 +28,7 @@ class ChatAdapter: RecyclerView.Adapter<ChatAdapter.ViewHolder>() {
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
         val txtUserName: TextView = view.findViewById(R.id.tvMessage)
-        val imgUser: CircleImageView = view.findViewById(R.id.userImage)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -50,10 +48,6 @@ class ChatAdapter: RecyclerView.Adapter<ChatAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val chat = chatList[position]
         holder.txtUserName.text = chat.message
-        Glide.with(holder.itemView)
-            .load(chat.imgProfile)
-            .placeholder(R.color.gray)
-            .into(holder.imgUser)
     }
 
     override fun getItemViewType(position: Int): Int {
