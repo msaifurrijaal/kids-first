@@ -13,20 +13,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/userImage"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="5dp"
-            android:src="@mipmap/ic_launcher" />
-
         <TextView
             android:id="@+id/tvMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingVertical="@dimen/small_100"
             android:paddingHorizontal="@dimen/normal_75"
+            android:layout_marginStart="@dimen/small_125"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="@dimen/large_225"
             android:background="@drawable/item_left_side_background"
