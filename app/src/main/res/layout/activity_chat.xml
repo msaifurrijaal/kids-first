@@ -75,7 +75,8 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:paddingVertical="@dimen/small_100"
-        android:paddingHorizontal="@dimen/small_50"/>
+        android:paddingHorizontal="@dimen/small_50"
+        tools:listitem="@layout/item_left"/>
 
     <LinearLayout
         android:layout_width="match_parent"

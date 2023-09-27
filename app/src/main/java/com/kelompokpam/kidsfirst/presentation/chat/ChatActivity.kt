@@ -69,15 +69,15 @@ class ChatActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, "message is empty", Toast.LENGTH_SHORT).show()
                     etMessage.setText("")
                 } else {
-                    sendMessage(dokter!!.uidUser, message, user!!.avatarUser)
+                    sendMessage(dokter!!.uidUser, message)
                     etMessage.setText("")
                 }
             }
         }
     }
 
-    private fun sendMessage(uidUser: String?, message: String, avatarUser: String?) {
-        chatViewModel.sendMessage(receiverId = uidUser!!, message = message, imgProfile = avatarUser!!)
+    private fun sendMessage(uidUser: String?, message: String) {
+        chatViewModel.sendMessage(receiverId = uidUser!!, message = message,)
             .observe(this) { response ->
                 when(response) {
                     is Resource.Error -> {

@@ -16,10 +16,9 @@ import com.kelompokpam.kidsfirst.data.model.Chat
 class ChatRepository(application: Application) {
 
     private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
-    private val userDatabase: DatabaseReference = FirebaseDatabase.getInstance().reference.child("chats")
     private val currentUser = firebaseAuth.currentUser
 
-    fun sendChat(receiverId: String, imgProfile: String, message: String): LiveData<Resource<Boolean>> {
+    fun sendChat(receiverId: String, message: String): LiveData<Resource<Boolean>> {
         val sendChatLiveData = MutableLiveData<Resource<Boolean>>()
         sendChatLiveData.value = Resource.Loading()
 
@@ -32,8 +31,7 @@ class ChatRepository(application: Application) {
                     uidChat = chatId,
                     senderId = currentUser!!.uid,
                     receiverId = receiverId,
-                    message = message,
-                    imgProfile = imgProfile
+                    message = message
                 )
             )
                 .addOnCompleteListener { task ->

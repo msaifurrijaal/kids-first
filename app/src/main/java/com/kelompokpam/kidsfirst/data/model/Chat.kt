@@ -12,9 +12,6 @@ data class Chat(
     @get:PropertyName("message")
     @set:PropertyName("message")
     var message: String? = null,
-    @get:PropertyName("img_profile")
-    @set:PropertyName("img_profile")
-    var imgProfile: String? = null,
     @get:PropertyName("uid_chat")
     @set:PropertyName("uid_chat")
     var uidChat: String? = null
