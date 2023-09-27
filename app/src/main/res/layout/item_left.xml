@@ -27,9 +27,6 @@
             android:textColor="@color/black"
             tools:text="farhan" />
 
-
-
     </LinearLayout>
-
 
 </LinearLayout>

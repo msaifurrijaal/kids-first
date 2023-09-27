@@ -108,6 +108,8 @@ class RegisterActivity : AppCompatActivity() {
                             finish()
                         }, 1500)
                 }
+
+                else -> {}
             }
         }
     }
