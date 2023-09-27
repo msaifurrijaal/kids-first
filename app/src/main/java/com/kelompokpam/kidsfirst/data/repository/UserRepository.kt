@@ -61,7 +61,6 @@ class UserRepository(application: Application) {
                 val message = it.message
                 userResult.postValue(Resource.Error(message))
             }
-
         return userResult
     }
 
@@ -107,7 +106,6 @@ class UserRepository(application: Application) {
                             userList.add(it)
                         }
                     }
-
                     dokterLiveData.value = Resource.Success(userList)
                 }
 
@@ -287,7 +285,6 @@ class UserRepository(application: Application) {
                 uploadResult.value = Resource.Error("Failed to upload image")
             }
         }
-
         return uploadResult
     }
 

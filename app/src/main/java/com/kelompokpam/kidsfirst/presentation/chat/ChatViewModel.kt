@@ -14,8 +14,8 @@ class ChatViewModel(application: Application): AndroidViewModel(application) {
 
     fun getAllUsers() = userRepository.getAllUsers()
 
-    fun sendMessage(receiverId: String, imgProfile: String, message: String) =
-        chatRepository.sendChat(receiverId, imgProfile, message)
+    fun sendMessage(receiverId: String, message: String) =
+        chatRepository.sendChat(receiverId, message)
 
     fun readChat(receiverId: String) = chatRepository.readChat(receiverId)
 
